@@ -9,11 +9,11 @@ export default function NavControls({ isNavOpen, setIsNavOpen }) {
       <div className="absolute top-6 left-6 z-30">
         <Link
           href="/"
-          className={`text-2xl font-bold ${
+          className={`text-4xl font-bold ${
             isNavOpen ? "text-white" : "text-black"
           }`}
         >
-          Studio.
+          X2
         </Link>
       </div>
 
@@ -23,7 +23,7 @@ export default function NavControls({ isNavOpen, setIsNavOpen }) {
           isNavOpen ? "text-white" : "text-black"
         }`}
       >
-        {isNavOpen ? <X size={24} /> : <Menu size={24} />}
+        {isNavOpen ? <X size={30} /> : <Menu size={30} />}
       </button>
     </>
   );
