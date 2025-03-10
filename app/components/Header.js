@@ -1,31 +1,31 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
-export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-
+export default function Header({ isNavOpen, setIsNavOpen }) {
+  useEffect(() => {
+    if (isNavOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isNavOpen]);
   return (
-    <header className="fixed top-0 left-0 w-full z-40 bg-neutral-950 text-white transition-all duration-300">
+    <motion.header
+      initial={{ height: "64px" }}
+      animate={{ height: isNavOpen ? "600px" : "64px" }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="fixed top-0 left-0 w-full bg-neutral-950 text-white transition-all duration-300 z-0"
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between py-4">
-        <Link href="/" className="text-2xl font-bold">
-          Studio.
-        </Link>
-        <div className="flex items-center gap-x-6">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
+        <div className="flex items-center gap-x-6"></div>
       </div>
 
       <AnimatePresence>
-        {isOpen && (
+        {isNavOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -39,18 +39,16 @@ export default function Header() {
                   <div className="mx-auto max-w-2xl lg:max-w-none">
                     <div className="grid grid-cols-1 sm:grid-cols-2">
                       <a
-                        className="group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 text-left"
+                        className="group relative isolate -mx-6 bg-neutral-950 px-6 py-10"
                         href="/work"
                       >
                         Proces
-                        <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span>
                       </a>
                       <a
-                        className="group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 text-left"
+                        className="group relative isolate -mx-6 bg-neutral-950 px-6 py-10"
                         href="/about"
                       >
                         Izbor Web Stranica
-                        <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span>
                       </a>
                     </div>
                   </div>
@@ -82,6 +80,6 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </motion.header>
   );
 }
