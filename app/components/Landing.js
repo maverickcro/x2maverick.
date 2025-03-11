@@ -1,6 +1,6 @@
 "use client";
 
-export default function Hero({ isNavOpen }) {
+export default function Landing({}) {
   return (
     <div
       className="relative flex flex-auto bg-white h-screen z-0"
@@ -11,13 +11,11 @@ export default function Hero({ isNavOpen }) {
       }}
     >
       <div className="relative isolate flex w-full flex-col pt-9">
-        <main className="w-full flex-auto">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-2 sm:mt-4 md:mt-56">
-            <div className="mx-auto max-w-2xl lg:max-w-none">
-              <div className="max-w-3xl"></div>
-            </div>
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-2 sm:mt-4 md:mt-56">
+          <div className="mx-auto max-w-2xl lg:max-w-none">
+            <div className="max-w-3xl"></div>
           </div>
-        </main>
+        </div>
       </div>
     </div>
   );

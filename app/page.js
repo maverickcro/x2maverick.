@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
+import Landing from "./components/Landing";
 import NavControls from "./components/NavControls";
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
         transition={{ duration: 0.3, ease: "easeInOut" }}
         className="flex flex-col"
       >
-        <Hero isNavOpen={isNavOpen} />
+        <Landing isNavOpen={isNavOpen} />
       </motion.main>
       <footer className="bg-neutral-950 text-white py-4 flex justify-center">
         <p>&copy; 2025 Studio. All rights reserved.</p>
