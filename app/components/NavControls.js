@@ -1,12 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import AnimatedHamburgerButton from "./AnimatedHamburgerButton";
 
 export default function NavControls({ isNavOpen, setIsNavOpen }) {
   return (
     <>
-      <div className="absolute top-6 left-6 z-30">
+      <div
+        className="absolute top-3 left-3 z-30 h-20 w-20 flex items-center justify-center"
+        style={{ transform: "translateY(-12px)" }}
+      >
         <Link
           href="/"
           className={`text-4xl font-bold ${
@@ -16,15 +19,12 @@ export default function NavControls({ isNavOpen, setIsNavOpen }) {
           X2
         </Link>
       </div>
-
-      <button
-        onClick={() => setIsNavOpen(!isNavOpen)}
-        className={`absolute top-6 right-6 z-30 p-2 rounded-full transition-all duration-300 ${
-          isNavOpen ? "text-white" : "text-black"
-        }`}
-      >
-        {isNavOpen ? <X size={30} /> : <Menu size={30} />}
-      </button>
+      <div className="absolute top-3 right-3 z-30">
+        <AnimatedHamburgerButton
+          isNavOpen={isNavOpen}
+          setIsNavOpen={setIsNavOpen}
+        />
+      </div>
     </>
   );
 }

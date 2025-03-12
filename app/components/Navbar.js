@@ -2,14 +2,14 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function Header({ isNavOpen, setIsNavOpen }) {
+export default function Navbar({ isNavOpen, setIsNavOpen }) {
   return (
-    <motion.header
+    <motion.nav
       initial={{ height: "64px" }}
       exit={{ height: "64px" }}
-      animate={{ height: isNavOpen ? "100vh" : "64px" }}
+      animate={{ height: isNavOpen ? "75vh" : "64px" }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="absolute top-0 left-0 w-full bg-neutral-950 text-white z-0"
+      className="absolute top-0 left-0 w-full bg-neutral-950 text-white"
     >
       <AnimatePresence>
         {isNavOpen && (
@@ -30,14 +30,14 @@ export default function Header({ isNavOpen, setIsNavOpen }) {
                         href="/process"
                       >
                         Proces
-                        <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span>
+                        <span className="absolute inset-y-0  w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span>
                       </a>
                       <a
                         className="group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 text-left"
                         href="/blog"
                       >
                         Galerija
-                        <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span>
+                        <span className="absolute inset-y-0  w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span>
                       </a>
                     </div>
                   </div>
@@ -49,17 +49,17 @@ export default function Header({ isNavOpen, setIsNavOpen }) {
                     <div className="grid grid-cols-1 sm:grid-cols-2">
                       <a
                         className="group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 text-left border-b-1 border-neutral-800 sm:border-b-0"
-                        href="/process"
+                        href="/about"
                       >
                         O Nama
-                        <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span>
+                        <span className="absolute inset-y-0  w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span>
                       </a>
                       <a
                         className="group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 text-left"
-                        href="/blog"
+                        href="/contact"
                       >
                         Javi Nam Se
-                        <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span>
+                        <span className="absolute inset-y-0  w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span>
                       </a>
                     </div>
                   </div>
@@ -69,6 +69,6 @@ export default function Header({ isNavOpen, setIsNavOpen }) {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </motion.nav>
   );
 }
