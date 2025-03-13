@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="hr"
-      className="relative min-h-full bg-neutral-950 text-base antialiased"
+      className="relative min-h-full bg-neutral-950 text-base antialiased overflow-x-hidden"
     >
       <motion.body
         className="antialiased"

@@ -13,7 +13,9 @@ const AnimatedHamburgerButton = ({ isNavOpen, setIsNavOpen }) => {
         exit={false}
         animate={isNavOpen ? "open" : "closed"}
         onClick={() => setIsNavOpen(!isNavOpen)}
-        className={`relative h-15 w-15 rounded-full bg-white/0 transition-colors hover:bg-white/20`}
+        className={`relative h-15 w-15 rounded-full bg-white/0 transition-colors ${
+          isNavOpen ? "hover:bg-white/20" : "hover:bg-black/20"
+        }`}
       >
         <motion.span
           variants={VARIANTS.top}
