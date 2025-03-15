@@ -12,7 +12,7 @@ export default function Proces() {
     requestAnimationFrame(raf);
   }, []);
   return (
-    <main className="w-full flex-auto min-h-screen  flex flex-col bg-white text-black p-4">
+    <main className="w-full flex-auto min-h-screen  flex flex-col bg-white text-black">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-40">
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div style={{ opacity: "1", transform: "none" }}>
@@ -35,7 +35,7 @@ export default function Proces() {
           </div>
         </div>
       </div>
-      <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
+      <div className="my-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:my-40 lg:space-y-40">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 group/section [counter-increment:section]">
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
@@ -47,6 +47,7 @@ export default function Proces() {
                       alt="Auto"
                       layout="fill"
                       objectFit="cover"
+                      style={{ borderRadius: "2.5rem" }}
                     />
                   </div>
                 </div>
@@ -61,46 +62,31 @@ export default function Proces() {
                   </h2>
                   <div className="mt-6">
                     <p>
-                      We work closely with our clients to understand their{" "}
+                      Odaberite predložak koji najbolje odgovara vašem{" "}
                       <strong className="font-semibold text-neutral-950">
-                        needs
-                      </strong>{" "}
-                      and goals, embedding ourselves in their every day
-                      operations to understand what makes their business tick.
-                    </p>
-                    <p>
-                      Our team of private investigators shadow the company
-                      director’s for several weeks while our account managers
-                      focus on going through their trash. Our senior security
-                      experts then perform social engineering hacks to gain
-                      access to their{" "}
+                        poslovanju
+                      </strong>
+                      , a mi ćemo ga prilagoditi vašim bojama, sadržaju i brendu
+                      – brzo i jednostavno. Svi naši{" "}
                       <strong className="font-semibold text-neutral-950">
-                        business
+                        web dizajnovi
                       </strong>{" "}
-                      accounts — handing that information over to our forensic
-                      accounting team.
-                    </p>
-                    <p>
-                      Once the full audit is complete, we report back with a
-                      comprehensive{" "}
-                      <strong className="font-semibold text-neutral-950">
-                        plan
-                      </strong>{" "}
-                      and, more importantly, a budget.
+                      izrađeni su modernim tehnologijama i optimizirani za
+                      dugotrajnu kvalitetu.
                     </p>
                   </div>
                   <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-                    Included in this phase
+                    U ovoj fazi:
                   </h3>
                   <ul role="list" className="mt-4 flex flex-wrap gap-4">
                     <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
-                      In-depth questionnaires
+                      Analiza poslovnih potreba
                     </li>
                     <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
-                      Feasibility studies
+                      Savjetovanje o dizajnu
                     </li>
                     <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
-                      Blood samples
+                      Odabir predloška
                     </li>
                   </ul>
                 </div>
@@ -119,6 +105,7 @@ export default function Proces() {
                       alt="Auto"
                       layout="fill"
                       objectFit="cover"
+                      style={{ borderRadius: "2.5rem" }}
                     />
                   </div>
                 </div>
@@ -133,32 +120,16 @@ export default function Proces() {
                   </h2>
                   <div className="mt-6">
                     <p>
-                      We work closely with our clients to understand their{" "}
+                      Što nam više informacija date, to bolje – logo, kontakt
+                      podaci, opisi usluga... sve pomaže da vaš{" "}
                       <strong className="font-semibold text-neutral-950">
-                        needs
+                        web
                       </strong>{" "}
-                      and goals, embedding ourselves in their every day
-                      operations to understand what makes their business tick.
-                    </p>
-                    <p>
-                      Our team of private investigators shadow the company
-                      director’s for several weeks while our account managers
-                      focus on going through their trash. Our senior security
-                      experts then perform social engineering hacks to gain
-                      access to their{" "}
+                      bude spreman bez odgađanja. Ako vam trebaju{" "}
                       <strong className="font-semibold text-neutral-950">
-                        business
+                        savjeti
                       </strong>{" "}
-                      accounts — handing that information over to our forensic
-                      accounting team.
-                    </p>
-                    <p>
-                      Once the full audit is complete, we report back with a
-                      comprehensive{" "}
-                      <strong className="font-semibold text-neutral-950">
-                        plan
-                      </strong>{" "}
-                      and, more importantly, a budget.
+                      ili pomoć oko sadržaja, tu smo za vas.
                     </p>
                   </div>
                   <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
@@ -166,13 +137,13 @@ export default function Proces() {
                   </h3>
                   <ul role="list" className="mt-4 flex flex-wrap gap-4">
                     <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
-                      In-depth questionnaires
+                      Prikupljanje materijala
                     </li>
                     <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
-                      Feasibility studies
+                      Organizacija sadržaja
                     </li>
                     <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
-                      Blood samples
+                      SEO optimizacija teksta
                     </li>
                   </ul>
                 </div>
@@ -191,6 +162,7 @@ export default function Proces() {
                       alt="Auto"
                       layout="fill"
                       objectFit="cover"
+                      style={{ borderRadius: "2.5rem" }}
                     />
                   </div>
                 </div>
@@ -205,32 +177,20 @@ export default function Proces() {
                   </h2>
                   <div className="mt-6">
                     <p>
-                      We work closely with our clients to understand their{" "}
+                      Vaš odabrani{" "}
                       <strong className="font-semibold text-neutral-950">
-                        needs
+                        web predložak
                       </strong>{" "}
-                      and goals, embedding ourselves in their every day
-                      operations to understand what makes their business tick.
-                    </p>
-                    <p>
-                      Our team of private investigators shadow the company
-                      director’s for several weeks while our account managers
-                      focus on going through their trash. Our senior security
-                      experts then perform social engineering hacks to gain
-                      access to their{" "}
+                      prilagođavamo tako da ne izgleda generički, već da se
+                      uklopi u vaše{" "}
                       <strong className="font-semibold text-neutral-950">
-                        business
-                      </strong>{" "}
-                      accounts — handing that information over to our forensic
-                      accounting team.
-                    </p>
-                    <p>
-                      Once the full audit is complete, we report back with a
-                      comprehensive{" "}
+                        brendiranje
+                      </strong>
+                      . Radimo precizne dorade i{" "}
                       <strong className="font-semibold text-neutral-950">
-                        plan
+                        optimizacije
                       </strong>{" "}
-                      and, more importantly, a budget.
+                      kako bi stranica ostavila pravi dojam na vaše klijente.
                     </p>
                   </div>
                   <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
@@ -238,13 +198,22 @@ export default function Proces() {
                   </h3>
                   <ul role="list" className="mt-4 flex flex-wrap gap-4">
                     <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
-                      In-depth questionnaires
+                      Implementacija dizajna
                     </li>
                     <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
-                      Feasibility studies
+                      Mobilna optimizacija
                     </li>
                     <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
-                      Blood samples
+                      SEO tehnička prilagodba
+                    </li>
+                    <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
+                      Dodavanje slika i teksta
+                    </li>
+                    <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
+                      Testiranje funkcionalnosti
+                    </li>
+                    <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
+                      Brzina i performanse
                     </li>
                   </ul>
                 </div>
@@ -263,6 +232,7 @@ export default function Proces() {
                       alt="Auto"
                       layout="fill"
                       objectFit="cover"
+                      style={{ borderRadius: "2.5rem" }}
                     />
                   </div>
                 </div>
@@ -277,32 +247,16 @@ export default function Proces() {
                   </h2>
                   <div className="mt-6">
                     <p>
-                      We work closely with our clients to understand their{" "}
+                      Prije lansiranja, provjeravamo svaku stranicu, testiramo
+                      na svim{" "}
                       <strong className="font-semibold text-neutral-950">
-                        needs
+                        uređajima
                       </strong>{" "}
-                      and goals, embedding ourselves in their every day
-                      operations to understand what makes their business tick.
-                    </p>
-                    <p>
-                      Our team of private investigators shadow the company
-                      director’s for several weeks while our account managers
-                      focus on going through their trash. Our senior security
-                      experts then perform social engineering hacks to gain
-                      access to their{" "}
+                      i osiguravamo da sve radi besprijekorno. Vaš{" "}
                       <strong className="font-semibold text-neutral-950">
-                        business
+                        web projekt
                       </strong>{" "}
-                      accounts — handing that information over to our forensic
-                      accounting team.
-                    </p>
-                    <p>
-                      Once the full audit is complete, we report back with a
-                      comprehensive{" "}
-                      <strong className="font-semibold text-neutral-950">
-                        plan
-                      </strong>{" "}
-                      and, more importantly, a budget.
+                      bit će spreman za rast i nove prilike.
                     </p>
                   </div>
                   <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
@@ -310,13 +264,16 @@ export default function Proces() {
                   </h3>
                   <ul role="list" className="mt-4 flex flex-wrap gap-4">
                     <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
-                      In-depth questionnaires
+                      Revizije i manje dorade
                     </li>
                     <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
-                      Feasibility studies
+                      Testiranje korisničkog iskustva
                     </li>
                     <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
-                      Blood samples
+                      Postavljanje domene
+                    </li>
+                    <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
+                      Pokretanje web stranice
                     </li>
                   </ul>
                 </div>
