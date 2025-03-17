@@ -21,7 +21,7 @@ export default function Proces() {
                 Proces
               </span>
               <span className="sr-only"> - </span>
-              <span className="mt-6 block max-w-5xl font-display text-3xl md:text-7xl font-bold tracking-tight [text-wrap:balance] text-neutral-950 sm:text-6xl">
+              <span className="mt-6 block max-w-5xl font-display text-5xl md:text-7xl font-bold tracking-tight [text-wrap:balance] text-neutral-950 sm:text-6xl">
                 Kako pretvaramo viziju <br /> u stvarnost
               </span>
             </h1>

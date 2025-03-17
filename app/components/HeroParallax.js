@@ -107,7 +107,7 @@ export const Header = () => {
               Galerija
             </span>
             <span className="sr-only"> - </span>
-            <span className="mt-6 block max-w-5xl font-display text-3xl md:text-7xl font-bold tracking-tight [text-wrap:balance] text-neutral-950 sm:text-6xl">
+            <span className="mt-6 block max-w-5xl font-display text-5xl md:text-7xl font-bold tracking-tight [text-wrap:balance] text-neutral-950 sm:text-6xl">
               Izaberite savršen dizajn <br /> za svoj web
             </span>
           </h1>
@@ -136,7 +136,7 @@ export const ProductCard = ({ product, translate }) => {
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative shrink-0"
+      className="group/product h-76 w-[25rem] relative shrink-0"
     >
       <Link
         href={product.link}
