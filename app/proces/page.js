@@ -17,15 +17,15 @@ export default function Proces() {
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div style={{ opacity: "1", transform: "none" }}>
             <h1>
-              <span className="block font-display text-base font-semibold text-neutral-950">
+              <span className="block font-display text-xl uppercase font-semibold text-neutral-950">
                 Proces
               </span>
               <span className="sr-only"> - </span>
-              <span className="mt-6 block max-w-5xl font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-6xl">
-                Kako pretvaramo viziju u stvarnost
+              <span className="mt-6 block max-w-5xl font-display text-3xl md:text-7xl font-bold tracking-tight [text-wrap:balance] text-neutral-950 sm:text-6xl">
+                Kako pretvaramo viziju <br /> u stvarnost
               </span>
             </h1>
-            <div className="mt-6 max-w-3xl text-xl text-neutral-600">
+            <div className="mt-6 max-w-3xl text-xl text-neutral-800">
               <p>
                 Fokusiramo se na rješenja koja su već dokazala svoju vrijednost,
                 usavršavamo ih i prilagođavamo vašim potrebama. Tako možete biti
