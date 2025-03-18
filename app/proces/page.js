@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Lenis from "lenis";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect } from "react";
 export default function Proces() {
   useEffect(() => {
@@ -11,6 +12,10 @@ export default function Proces() {
     }
     requestAnimationFrame(raf);
   }, []);
+  // const { scrollY } = useScroll();
+  // const y1 = useTransform(scrollY, [0, 300], [100, -80]);
+  // const y2 = useTransform(scrollY, [0, 300], [100, -50]);
+
   return (
     <main className="w-full flex-auto min-h-screen  flex flex-col bg-white text-black">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-40">
@@ -39,26 +44,28 @@ export default function Proces() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8 group/section [counter-increment:section]">
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
-              <div className="flex justify-center">
-                <div className="w-full flex-none sm:w-[35rem]">
-                  <div className="justify-center lg:justify-end lg:group-even/section:justify-start relative flex aspect-719/680 w-full grayscale">
-                    <Image
-                      src="/auto1.jpg"
-                      alt="Auto"
-                      layout="fill"
-                      objectFit="cover"
-                      style={{
-                        borderTopRightRadius: "2.5rem",
-                        borderBottomRightRadius: "2.5rem",
-                      }}
-                    />
-                  </div>
-                </div>
+              <div
+                //style={{ y: y1 }}
+                className="sm:w-[35rem] justify-center lg:justify-end lg:group-even/section:justify-start relative flex aspect-719/680 w-full grayscale"
+              >
+                <Image
+                  src="/auto1.jpg"
+                  alt="Auto"
+                  layout="fill"
+                  objectFit="cover"
+                  style={{
+                    borderTopRightRadius: "2.5rem",
+                    borderBottomRightRadius: "2.5rem",
+                  }}
+                />
               </div>
-              <div className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:group-even/section:order-first">
+              <div
+                //style={{ y: y2 }}
+                className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:group-even/section:order-first"
+              >
                 <div>
-                  <div>
-                    <span className="text-neutral-300">{`/  `}</span>01
+                  <div className="text-xl text-neutral-500 font-semibold">
+                    <span>{`/  `}</span>01
                   </div>
                   <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
                     Odaberite idealan predložak
@@ -79,7 +86,7 @@ export default function Proces() {
                     </p>
                   </div>
                   <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-                    U ovoj fazi:
+                    U ovoj fazi radimo:
                   </h3>
                   <ul role="list" className="mt-4 flex flex-wrap gap-4">
                     <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
@@ -100,26 +107,28 @@ export default function Proces() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8 group/section [counter-increment:section]">
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
-              <div className="flex justify-center">
-                <div className="w-full flex-none sm:w-[35rem]">
-                  <div className="justify-center lg:justify-end lg:group-even/section:justify-start relative flex aspect-400/400 w-full grayscale">
-                    <Image
-                      src="/auto2.jpg"
-                      alt="Auto"
-                      layout="fill"
-                      objectFit="cover"
-                      style={{
-                        borderTopLeftRadius: "2.5rem",
-                        borderBottomLeftRadius: "2.5rem",
-                      }}
-                    />
-                  </div>
-                </div>
+              <div
+                //style={{ y: y1 }}
+                className="sm:w-[35rem] justify-center lg:justify-end lg:group-even/section:justify-start relative flex aspect-719/680 w-full grayscale"
+              >
+                <Image
+                  src="/auto2.jpg"
+                  alt="Auto"
+                  layout="fill"
+                  objectFit="cover"
+                  style={{
+                    borderTopLeftRadius: "2.5rem",
+                    borderBottomLeftRadius: "2.5rem",
+                  }}
+                />
               </div>
-              <div className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:group-even/section:order-first">
+              <div
+                //style={{ y: y2 }}
+                className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:group-even/section:order-first"
+              >
                 <div>
-                  <div>
-                    <span className="text-neutral-300">{`/  `}</span>02
+                  <div className="text-xl text-neutral-500 font-semibold">
+                    <span>{`/  `}</span>02
                   </div>
                   <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
                     Podijelite detalje projekta
@@ -139,7 +148,7 @@ export default function Proces() {
                     </p>
                   </div>
                   <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-                    Included in this phase
+                    U ovoj fazi radimo:
                   </h3>
                   <ul role="list" className="mt-4 flex flex-wrap gap-4">
                     <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
@@ -160,26 +169,28 @@ export default function Proces() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8 group/section [counter-increment:section]">
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
-              <div className="flex justify-center">
-                <div className="w-full flex-none sm:w-[35rem]">
-                  <div className="justify-center lg:justify-end lg:group-even/section:justify-start relative flex aspect-719/680 w-full grayscale">
-                    <Image
-                      src="/auto1.jpg"
-                      alt="Auto"
-                      layout="fill"
-                      objectFit="cover"
-                      style={{
-                        borderTopRightRadius: "2.5rem",
-                        borderBottomRightRadius: "2.5rem",
-                      }}
-                    />
-                  </div>
-                </div>
+              <div
+                //style={{ y: y1 }}
+                className="sm:w-[35rem] justify-center lg:justify-end lg:group-even/section:justify-start relative flex aspect-719/680 w-full grayscale"
+              >
+                <Image
+                  src="/auto1.jpg"
+                  alt="Auto"
+                  layout="fill"
+                  objectFit="cover"
+                  style={{
+                    borderTopRightRadius: "2.5rem",
+                    borderBottomRightRadius: "2.5rem",
+                  }}
+                />
               </div>
-              <div className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:group-even/section:order-first">
+              <div
+                //style={{ y: y2 }}
+                className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:group-even/section:order-first"
+              >
                 <div>
-                  <div>
-                    <span className="text-neutral-300">{`/  `}</span>03
+                  <div className="text-xl text-neutral-500 font-semibold">
+                    <span>{`/  `}</span>03
                   </div>
                   <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
                     Razvoj i prilagodba
@@ -203,7 +214,7 @@ export default function Proces() {
                     </p>
                   </div>
                   <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-                    Included in this phase
+                    U ovoj fazi radimo:
                   </h3>
                   <ul role="list" className="mt-4 flex flex-wrap gap-4">
                     <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
@@ -233,26 +244,28 @@ export default function Proces() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8 group/section [counter-increment:section]">
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
-              <div className="flex justify-center">
-                <div className="w-full flex-none sm:w-[35rem]">
-                  <div className="justify-center lg:justify-end lg:group-even/section:justify-start relative flex aspect-719/680 w-full grayscale">
-                    <Image
-                      src="/auto2.jpg"
-                      alt="Auto"
-                      layout="fill"
-                      objectFit="cover"
-                      style={{
-                        borderTopLeftRadius: "2.5rem",
-                        borderBottomLeftRadius: "2.5rem",
-                      }}
-                    />
-                  </div>
-                </div>
+              <div
+                //style={{ y: y1 }}
+                className="sm:w-[35rem] justify-center lg:justify-end lg:group-even/section:justify-start relative flex aspect-719/680 w-full grayscale"
+              >
+                <Image
+                  src="/auto2.jpg"
+                  alt="Auto"
+                  layout="fill"
+                  objectFit="cover"
+                  style={{
+                    borderTopLeftRadius: "2.5rem",
+                    borderBottomLeftRadius: "2.5rem",
+                  }}
+                />
               </div>
-              <div className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:group-even/section:order-first">
+              <div
+                //style={{ y: y2 }}
+                className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:group-even/section:order-first"
+              >
                 <div>
-                  <div>
-                    <span className="text-neutral-300">{`/  `}</span>04
+                  <div className="text-xl text-neutral-500 font-semibold">
+                    <span>{`/  `}</span>04
                   </div>
                   <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
                     Završni pregled i lansiranje projekta
@@ -272,7 +285,7 @@ export default function Proces() {
                     </p>
                   </div>
                   <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-                    Included in this phase
+                    U ovoj fazi radimo:
                   </h3>
                   <ul role="list" className="mt-4 flex flex-wrap gap-4">
                     <li className="rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600">
