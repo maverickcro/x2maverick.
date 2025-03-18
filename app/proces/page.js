@@ -40,14 +40,17 @@ export default function Proces() {
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
               <div className="flex justify-center">
-                <div className="w-full flex-none sm:w-[45rem]">
+                <div className="w-full flex-none sm:w-[35rem]">
                   <div className="justify-center lg:justify-end lg:group-even/section:justify-start relative flex aspect-719/680 w-full grayscale">
                     <Image
                       src="/auto1.jpg"
                       alt="Auto"
                       layout="fill"
                       objectFit="cover"
-                      style={{ borderRadius: "2.5rem" }}
+                      style={{
+                        borderTopRightRadius: "2.5rem",
+                        borderBottomRightRadius: "2.5rem",
+                      }}
                     />
                   </div>
                 </div>
@@ -98,14 +101,17 @@ export default function Proces() {
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
               <div className="flex justify-center">
-                <div className="w-full flex-none sm:w-[45rem]">
-                  <div className="justify-center lg:justify-end lg:group-even/section:justify-start relative flex aspect-719/680 w-full grayscale">
+                <div className="w-full flex-none sm:w-[35rem]">
+                  <div className="justify-center lg:justify-end lg:group-even/section:justify-start relative flex aspect-400/400 w-full grayscale">
                     <Image
                       src="/auto2.jpg"
                       alt="Auto"
                       layout="fill"
                       objectFit="cover"
-                      style={{ borderRadius: "2.5rem" }}
+                      style={{
+                        borderTopLeftRadius: "2.5rem",
+                        borderBottomLeftRadius: "2.5rem",
+                      }}
                     />
                   </div>
                 </div>
@@ -155,14 +161,17 @@ export default function Proces() {
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
               <div className="flex justify-center">
-                <div className="w-full flex-none sm:w-[45rem]">
+                <div className="w-full flex-none sm:w-[35rem]">
                   <div className="justify-center lg:justify-end lg:group-even/section:justify-start relative flex aspect-719/680 w-full grayscale">
                     <Image
                       src="/auto1.jpg"
                       alt="Auto"
                       layout="fill"
                       objectFit="cover"
-                      style={{ borderRadius: "2.5rem" }}
+                      style={{
+                        borderTopRightRadius: "2.5rem",
+                        borderBottomRightRadius: "2.5rem",
+                      }}
                     />
                   </div>
                 </div>
@@ -225,14 +234,17 @@ export default function Proces() {
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
               <div className="flex justify-center">
-                <div className="w-full flex-none sm:w-[45rem]">
+                <div className="w-full flex-none sm:w-[35rem]">
                   <div className="justify-center lg:justify-end lg:group-even/section:justify-start relative flex aspect-719/680 w-full grayscale">
                     <Image
                       src="/auto2.jpg"
                       alt="Auto"
                       layout="fill"
                       objectFit="cover"
-                      style={{ borderRadius: "2.5rem" }}
+                      style={{
+                        borderTopLeftRadius: "2.5rem",
+                        borderBottomLeftRadius: "2.5rem",
+                      }}
                     />
                   </div>
                 </div>
