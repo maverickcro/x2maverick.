@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import FAQComponent from "./components/FAQ";
 import { motion } from "framer-motion";
 export default function Home() {
   return (
-    <main className="w-full min-h-screen flex flex-col bg-white text-black p-4">
+    <main className="w-full min-h-screen flex flex-col bg-white p-4">
       <section className="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
         <div className="flex flex-col md:w-1/2 mt-[5rem] md:mt-0">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
@@ -39,6 +40,7 @@ export default function Home() {
           />
         </div>
       </section>
+      <FAQComponent />
     </main>
   );
 }
