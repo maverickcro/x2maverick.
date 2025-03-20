@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar({ isNavOpen, setIsNavOpen }) {
+  // nista
   return (
     <motion.nav
       initial={{ height: "64px" }}
