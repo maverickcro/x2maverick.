@@ -4,34 +4,24 @@ import { useEffect } from "react";
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import Lenis from "lenis";
 
-export const HeroParallax = ({ products }) => {
-  useEffect(() => {
-    const lenis = new Lenis();
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-  }, []);
-  const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(5, 10);
-  const thirdRow = products.slice(10, 15);
+export const GallerySection = ({ products }) => {
+  const firstRow = products;
+  const secondRow = products;
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
 
-  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
+  const springConfig = { stiffness: 500, damping: 30, bounce: 50 };
 
   const translateX = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, 1000]),
+    useTransform(scrollYProgress, [0, 1], [0, 2700]),
     springConfig
   );
   const translateXReverse = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, -1000]),
+    useTransform(scrollYProgress, [0, 1], [0, -2700]),
     springConfig
   );
   const rotateX = useSpring(
@@ -43,17 +33,17 @@ export const HeroParallax = ({ products }) => {
     springConfig
   );
   const rotateZ = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [20, 0]),
+    useTransform(scrollYProgress, [0, 0.2], [10, 0]),
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
+    useTransform(scrollYProgress, [0, 0.2], [-400, 300]),
     springConfig
   );
   return (
     <div
       ref={ref}
-      className="bg-white h-[300vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="bg-white h-[180vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -79,15 +69,6 @@ export const HeroParallax = ({ products }) => {
             <ProductCard
               product={product}
               translate={translateXReverse}
-              key={product.title}
-            />
-          ))}
-        </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
-          {thirdRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
               key={product.title}
             />
           ))}

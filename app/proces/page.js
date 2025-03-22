@@ -1,17 +1,8 @@
 "use client";
 import Image from "next/image";
-import Lenis from "lenis";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect } from "react";
 export default function Proces() {
-  useEffect(() => {
-    const lenis = new Lenis();
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-  }, []);
   // const { scrollY } = useScroll();
   // const y1 = useTransform(scrollY, [0, 300], [100, -80]);
   // const y2 = useTransform(scrollY, [0, 300], [100, -50]);

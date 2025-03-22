@@ -14,15 +14,15 @@ export default function RootLayout({ children }) {
       className="min-h-full bg-neutral-950 text-base antialiased overflow-x-hidden"
     >
       <body>
+        <Navbar isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
         <motion.div
-          className="antialiased text-neutral-950"
+          className="text-neutral-950"
           initial={{ marginTop: 0 }}
           exit={{ marginTop: 0 }}
           //umjesto 100vh stavi prop koliki je height nava?
           animate={{ marginTop: isNavOpen ? "75vh" : "0" }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
-          <Navbar isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
           <NavControls isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
           <div
             className="relative flex flex-col bg-white"
@@ -34,8 +34,8 @@ export default function RootLayout({ children }) {
             }}
           ></div>
           {children}
-          <Footer />
         </motion.div>
+        <Footer />
       </body>
     </html>
   );
