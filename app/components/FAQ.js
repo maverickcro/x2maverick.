@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function FAQComponent() {
   const [expanded, setExpanded] = useState(false);
   return (
-    <section className="max-w-7xl w-full mx-auto flex flex-col items-center">
+    <section className="max-w-6xl w-full mx-auto flex flex-col items-center">
       <h2 className="bg-white text-3xl font-bold py-2.5 mx-auto">
         FAQ / Česta pitanja
       </h2>

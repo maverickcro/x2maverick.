@@ -22,7 +22,7 @@ export default function Navbar({ isNavOpen, setIsNavOpen }) {
           >
             <nav className="mt-[64px] font-display text-5xl font-medium tracking-tight text-white">
               <div className="even:mt-px sm:bg-neutral-950">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8 border-t-1 border-neutral-800">
+                <div className="mx-auto max-w-6xl px-6 lg:px-8 border-t-1 border-neutral-800">
                   <div className="mx-auto max-w-2xl lg:max-w-none">
                     <div className="grid grid-cols-1 sm:grid-cols-2">
                       <a
@@ -44,7 +44,7 @@ export default function Navbar({ isNavOpen, setIsNavOpen }) {
                 </div>
               </div>
               <div className="even:mt-px sm:bg-neutral-950">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8 border-y-1 border-neutral-800">
+                <div className="mx-auto max-w-6xl px-6 lg:px-8 border-y-1 border-neutral-800">
                   <div className="mx-auto max-w-2xl lg:max-w-none">
                     <div className="grid grid-cols-1 sm:grid-cols-2">
                       <a

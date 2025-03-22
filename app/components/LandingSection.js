@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const LandingSection = () => {
   return (
     <section className="w-full min-h-[80vh] ">
-      <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center">
+      <div className="mx-auto max-w-6xl flex flex-col md:flex-row items-center">
         <div className="flex flex-col md:w-1/2 mt-[5rem] md:mt-0">
           <span className="text-sm uppercase font-bold">
             All-in-one rješenje

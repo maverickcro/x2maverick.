@@ -9,7 +9,7 @@ export default function Proces() {
 
   return (
     <main className="w-full flex-auto min-h-screen  flex flex-col bg-white text-black">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-40">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-40">
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div style={{ opacity: "1", transform: "none" }}>
             <h1>
@@ -32,7 +32,7 @@ export default function Proces() {
         </div>
       </div>
       <div className="my-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:my-40 lg:space-y-40">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 group/section [counter-increment:section]">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8 group/section [counter-increment:section]">
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
               <div
@@ -95,7 +95,7 @@ export default function Proces() {
             </div>
           </div>
         </div>
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 group/section [counter-increment:section]">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8 group/section [counter-increment:section]">
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
               <div
@@ -157,7 +157,7 @@ export default function Proces() {
             </div>
           </div>
         </div>
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 group/section [counter-increment:section]">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8 group/section [counter-increment:section]">
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
               <div
@@ -232,7 +232,7 @@ export default function Proces() {
             </div>
           </div>
         </div>
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 group/section [counter-increment:section]">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8 group/section [counter-increment:section]">
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
               <div
