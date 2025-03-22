@@ -18,6 +18,7 @@ export default function Home() {
   return (
     <main className="flex flex-col bg-white">
       <LandingSection />
+      {/* Projekti kao na enterwell */}
       <HowItWorksSection />
       {/* <GallerySection products={products} /> */}
       {/* Zasto mi? - sve u jednom */}

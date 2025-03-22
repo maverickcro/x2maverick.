@@ -23,17 +23,13 @@ export default function NavControls({ isNavOpen, setIsNavOpen }) {
       </div>
       {/* napravi komponentu od ovog buttona */}
       <Link href="/kontakt" passHref legacyBehavior>
-        <motion.a
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
+        <a
           className="absolute top-6 right-25 z-30 inline-block max-w-fit rounded-sm border-2 border-double border-black bg-white px-6 py-1 font-bold uppercase text-black transition-all duration-300 
               hover:-translate-x-1 hover:-translate-y-1 hover:rounded-md hover:shadow-[4px_4px_0px_black]
               active:translate-x-0 active:translate-y-0 active:rounded-2xl active:shadow-none"
         >
           Javite se
-        </motion.a>
+        </a>
       </Link>
 
       <div className="absolute top-3 right-3 z-30">

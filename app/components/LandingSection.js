@@ -11,13 +11,13 @@ const LandingSection = () => {
           <span className="text-sm uppercase font-bold">
             All-in-one rješenje
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-4">
             Vaša vlastita web stranica već od €199 godišnje
           </h1>
           <span className="text-lg sm:text-xl pt-4 text-gray-600 italic">
             Bez skrivenih troškova i dodatnih naknada.
           </span>
-          <Link href="/proces" passHref legacyBehavior>
+          <Link href="/galerija" passHref legacyBehavior>
             <motion.a
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -27,7 +27,7 @@ const LandingSection = () => {
             hover:-translate-x-1 hover:-translate-y-1 hover:rounded-md hover:shadow-[4px_4px_0px_black]
             active:translate-x-0 active:translate-y-0 active:rounded-2xl active:shadow-none"
             >
-              Kako do web stranice?
+              Pogledaj što nudimo
             </motion.a>
           </Link>
         </div>

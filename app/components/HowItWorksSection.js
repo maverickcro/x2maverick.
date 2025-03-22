@@ -2,50 +2,74 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
 
 const steps = [
   {
-    number: "00",
-    title: "PRVI KONTAKT",
-    description:
-      "Vaš email pokreće proces. Prikupljamo informacije, definiramo ciljeve i šaljemo vremenski okvir.",
-  },
-  {
     number: "01",
-    title: "ISTRAŽIVANJE",
+    title: "Odaberite idealan predložak",
     description:
-      "Kroz dubinsku analizu definiramo ciljeve i pripremamo specifikacije i prototip.",
+      "Odaberite predložak koji najbolje odgovara vašem poslovanju, a mi ćemo ga prilagoditi vašim bojama, sadržaju i brendu – brzo i jednostavno. Svi naši web dizajnovi izrađeni su modernim tehnologijama i optimizirani za dugotrajnu kvalitetu.",
   },
   {
     number: "02",
-    title: "DIZAJN",
-    description: "Kvalitetan dizajn optimiziran za uspjeh vašeg projekta.",
+    title: "Podijelite detalje projekta",
+    description:
+      "Što nam više informacija date, to bolje – logo, kontakt podaci, opisi usluga... sve pomaže da vaš web bude spreman bez odgađanja. Ako vam trebaju savjeti ili pomoć oko sadržaja, tu smo za vas.",
   },
   {
     number: "03",
-    title: "IZRADA I LANSIRANJE",
+    title: "Razvoj i prilagodba",
     description:
-      "Web stranica ide online. Pratimo performanse i nudimo podršku.",
+      "Vaš odabrani web predložak prilagođavamo tako da ne izgleda generički, već da se uklopi u vaše brendiranje. Radimo precizne dorade i optimizacije kako bi stranica ostavila pravi dojam na vaše klijente.",
+  },
+  {
+    number: "04",
+    title: "Završni pregled i lansiranje projekta",
+    description:
+      "Prije lansiranja, provjeravamo svaku stranicu, testiramo na svim uređajima i osiguravamo da sve radi besprijekorno. Vaš web projekt bit će spreman za rast i nove prilike.",
   },
 ];
 
 export default function ScrollRevealSteps() {
   return (
-    <section className="w-full bg-white py-32 z-111">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <h2 className="text-4xl font-bold text-neutral-950 mb-6">
-          Pouzdan proces
-        </h2>
-        <p className="text-lg text-gray-700 max-w-3xl mb-16">
-          Naš proces vodi te jasno od prvog kontakta do gotove stranice. Bez
-          stresa, sve pod kontrolom.
-        </p>
+    <section className="w-full bg-white py-32">
+      <div className="max-w-6xl mx-auto">
+        <div
+          className="max-w-2xl py-[3rem]"
+          style={{ opacity: "1", transform: "none" }}
+        >
+          <h2>
+            <span className="text-sm uppercase font-bold">
+              Kako ovo funkcionira?
+            </span>
+            <span className="sr-only"> - </span>
+            <span className="block font-display tracking-tight [text-wrap:balance] text-5xl font-medium sm:text-6xl text-neutral-950">
+              Proces je dizajniran da bude jednostavan i intuitivan.
+            </span>
+          </h2>
+          <div className="mt-6 text-xl text-neutral-600">
+            <p>U svega 4 koraka prezentirajte svoj biznis online.</p>
+          </div>
+        </div>
 
-        <ul className="space-y-20">
+        <ul className="mb-[3rem]">
           {steps.map((step, index) => (
             <StepItem key={index} step={step} index={index} />
           ))}
         </ul>
+        <div className="flex justify-center items-center">
+          <Link href="/proces" passHref legacyBehavior>
+            <a
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="inline-block max-w-fit my-6 rounded-sm border-2 border-double border-black bg-white px-6 py-1 font-bold uppercase text-black transition-all duration-300 
+            hover:-translate-x-1 hover:-translate-y-1 hover:rounded-md hover:shadow-[4px_4px_0px_black]
+            active:translate-x-0 active:translate-y-0 active:rounded-2xl active:shadow-none"
+            >
+              Više o procesu
+            </a>
+          </Link>
+        </div>
       </div>
     </section>
   );
@@ -55,17 +79,14 @@ function StepItem({ step, index }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 100%", "center 85%"],
+    offset: ["start 100%", "end 85%"],
   });
-  const scale = useTransform(scrollYProgress, [0, 1], [1.2, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1.1, 1]);
   const lineWidth = useTransform(scrollYProgress, [0, 1], ["70%", "100%"]);
 
   return (
     <li ref={ref}>
-      <motion.div
-        style={{ scale }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
+      <motion.div className="pt-[3rem]" style={{ scale }}>
         <div className="relative w-full mb-6">
           <motion.div
             style={{ width: lineWidth }}
@@ -74,7 +95,8 @@ function StepItem({ step, index }) {
           />
         </div>
         <h3 className="text-neutral-950 text-2xl font-bold flex items-center gap-4">
-          <span className="text-red-600 text-xl font-semibold w-10">
+          <span className="text-2xl text-gray-600 font-semibold">
+            <span>{`/  `}</span>
             {step.number}
           </span>{" "}
           {step.title}
