@@ -5,6 +5,7 @@ import HowItWorksSection from "./components/HowItWorksSection";
 import { useEffect } from "react";
 import Lenis from "lenis";
 import { GallerySection } from "./components/GallerySection";
+import ProjectsSection from "./components/ProjectsSection";
 import { products } from "./lib/products";
 export default function Home() {
   useEffect(() => {
@@ -18,9 +19,9 @@ export default function Home() {
   return (
     <main className="flex flex-col bg-white">
       <LandingSection />
-      {/* Projekti kao na enterwell */}
+      <ProjectsSection />
       <HowItWorksSection />
-      {/* <GallerySection products={products} /> */}
+      <GallerySection products={products} />
       {/* Zasto mi? - sve u jednom */}
       {/* Cijene paketa */}
       {/* Za koga je ovo */}

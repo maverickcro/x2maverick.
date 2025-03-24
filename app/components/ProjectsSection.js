@@ -4,34 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 
-const steps = [
-  {
-    number: "01",
-    title: "Odaberite idealan predložak",
-    description:
-      "Odaberite predložak koji najbolje odgovara vašem poslovanju, a mi ćemo ga prilagoditi vašim bojama, sadržaju i brendu – brzo i jednostavno. Svi naši web dizajnovi izrađeni su modernim tehnologijama i optimizirani za dugotrajnu kvalitetu.",
-  },
-  {
-    number: "02",
-    title: "Podijelite detalje projekta",
-    description:
-      "Što nam više informacija date, to bolje – logo, kontakt podaci, opisi usluga... sve pomaže da vaš web bude spreman bez odgađanja. Ako vam trebaju savjeti ili pomoć oko sadržaja, tu smo za vas.",
-  },
-  {
-    number: "03",
-    title: "Razvoj i prilagodba",
-    description:
-      "Vaš odabrani web predložak prilagođavamo tako da ne izgleda generički, već da se uklopi u vaše brendiranje. Radimo precizne dorade i optimizacije kako bi stranica ostavila pravi dojam na vaše klijente.",
-  },
-  {
-    number: "04",
-    title: "Završni pregled i lansiranje projekta",
-    description:
-      "Prije lansiranja, provjeravamo svaku stranicu, testiramo na svim uređajima i osiguravamo da sve radi besprijekorno. Vaš web projekt bit će spreman za rast i nove prilike.",
-  },
-];
-
-export default function ScrollRevealSteps() {
+export default function ProjectsSection() {
   return (
     <section className="w-full bg-white py-32">
       <div className="max-w-6xl mx-auto">
@@ -54,11 +27,11 @@ export default function ScrollRevealSteps() {
         </div>
 
         <ul className="mb-[3rem]">
-          {steps.map((step, index) => (
+          {/* {steps.map((step, index) => (
             <StepItem key={index} step={step} index={index} />
-          ))}
+          ))} */}
         </ul>
-        <div className="flex justify-center items-center">
+        {/* <div className="flex justify-center items-center">
           <Link href="/proces" passHref legacyBehavior>
             <a
               transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -69,13 +42,13 @@ export default function ScrollRevealSteps() {
               Više o procesu
             </a>
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );
 }
 
-function StepItem({ step, index }) {
+function StepItem({ step }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
