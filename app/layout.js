@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       className="min-h-full bg-neutral-950 text-base antialiased overflow-x-hidden"
     >
       <body>
-        <Navbar isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
+        {/* <Navbar isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
         <motion.div
           className="text-neutral-950"
           initial={{ marginTop: 0 }}
@@ -35,7 +35,8 @@ export default function RootLayout({ children }) {
           ></div>
           {children}
         </motion.div>
-        <Footer />
+        <Footer /> */}
+        {children}
       </body>
     </html>
   );
