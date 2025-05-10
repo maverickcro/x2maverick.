@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import NavControls from "./components/NavControls";
+import Maintenance from "./maintenance/page";
 
 export default function RootLayout({ children }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -36,7 +37,8 @@ export default function RootLayout({ children }) {
           {children}
         </motion.div>
         <Footer /> */}
-        {children}
+        {/* {children} */}
+        <Maintenance />
       </body>
     </html>
   );
