@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
   images: {
     remotePatterns: [
@@ -7,8 +8,17 @@ module.exports = {
         hostname: "aceternity.com",
         port: "",
         pathname: "/images/**",
-        search: "",
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/",
+        destination: "/maintenance",
+      },
+    ];
+  },
 };
+
+module.exports = nextConfig;
